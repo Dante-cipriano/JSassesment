@@ -1,0 +1,31 @@
+let collectionNFT = []; 
+
+function mintNFT (_name, _color, _age, _weight) {
+    const Cat ={
+        "name":_name,
+        "color":_color,
+        "age":_age,
+        "weight":_weight,
+    }
+    collectionNFT.push(Cat);
+console.log("minted: " + _name);
+
+}    
+function listNFTs () {
+    for(let i = 0; i < collectionNFT.length; i++){
+        console.log("\nId: \t\t" + (i+1));
+        console.log("name: \t\t"+ collectionNFT[i].name);
+        console.log("color: \t\t"+ collectionNFT[i].color);
+        console.log("age: "+ collectionNFT[i].age);
+        console.log("weight: \t\t"+ collectionNFT[i].weight);
+    }    
+}
+function getTotalSupply() {
+    console.log("TOTALNFTs" + collectionNFT.length);
+}
+mintNFT("Muning","White","3 years old", "4KG")
+mintNFT("Baldog","bROWN","2years old", "4KG")
+mintNFT("Toothpaste","Dark","1 years old", "4KG")
+mintNFT("LiGHT","YELlow","4 years old", "4KG")
+listNFTs();
+getTotalSupply();
